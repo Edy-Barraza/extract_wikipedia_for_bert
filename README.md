@@ -1,6 +1,6 @@
 # Extract Wikipedia For BERT
 
-Extract Wikipedia as a corpus suitable for pre-training on [Google's BERT model](https://github.com/google-research/bert). 
+Extract Wikipedia as a corpus suitable for pre-training on [Google's BERT Transformer model](https://github.com/google-research/bert). 
 Running this process returns a txt file, where each sentence is written on a new line and each article is seperated by a line. 
 
 Performing this task is a 3 step process! 
@@ -49,4 +49,21 @@ Each file `wiki_xx` contains a JSON on each line in form:
 ```
 
 For more information on `WikiExtractor.py` checkout their [github page](https://github.com/attardi/wikiextractor)
+
 <h3> III. Run extract_jsons.py </h3>
+
+We now have everything we need to create our txt file for training the BERT transformer model! Let's run:
+
+```
+python extract_jsons.py --folder /folderof/foldersof/jsons/ --write_file /filepath/write_file.txt 
+```
+
+`extract_jsons.py` has the following arguments:
+
+```
+Args:
+    folder (str): the folder containing the folders of wikipedia jsons we just previously created from running WikiExtrator.py
+    write_file (str) : the txt file we will be writing to 
+```
+
+And with that you have the data txt file you need for training! 
