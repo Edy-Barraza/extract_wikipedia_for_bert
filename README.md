@@ -29,3 +29,5 @@ enwiki-latest-pages-articles.xml.bz2
 ```
 
 <h3> II. Run WikiExtractor.py </h3>
+
+<h3> III. Run extract_jsons.py </h3>
