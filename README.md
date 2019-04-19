@@ -22,7 +22,7 @@ When working on my machine I prefer a smaller shard: `enwiki-latest-pages-articl
 But on cloud I prefer the whole dump: `enwiki-latest-pages-articles.xml.bz2`
 
 <h3> II. Run WikiExtractor.py </h3>
-The next step is to extract wikipedia in a form we can work with. Using the script wikiextractor/WikiExtractor.py, you run 
+The next step is to extract wikipedia in a form we can work with. Using the script `wikiextractor/WikiExtractor.py` , you run 
 
 ```
 python WikiExtractor.py /dumppath/your_chosen_dump.bz2 --output /outputdir/ --json 
@@ -41,7 +41,7 @@ This form is demonstrated as such:
     └── wiki_99
     
 ```
-Each file wiki_xx contains a JSON on each line in form:
+Each file `wiki_xx` contains a JSON on each line in form:
 
 ```
 {"id":"336","url": "https://en.wikipedia.org/wiki?curid=336", "title": "Altruism","text": "Altruism\n\nAltruism is the principle and moral practice of concern for happiness of other human beings and/or animals, resulting in a quality of life both material and spiritual..." } 
