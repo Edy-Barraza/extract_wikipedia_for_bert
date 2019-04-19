@@ -22,7 +22,8 @@ When working on my machine I prefer a smaller shard: `enwiki-latest-pages-articl
 But on cloud I prefer the whole dump: `enwiki-latest-pages-articles.xml.bz2`
 
 <h3> II. Run WikiExtractor.py </h3>
-The next step is to extract wikipedia in a form we can work with. Using the script `wikiextractor/WikiExtractor.py` , you run 
+
+The next step is to extract wikipedia in a form we can work with. Using the script `/wikiextractor/WikiExtractor.py`  you run 
 
 ```
 python WikiExtractor.py /dumppath/your_chosen_dump.bz2 --output /outputdir/ --json 
