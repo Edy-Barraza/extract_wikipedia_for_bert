@@ -66,4 +66,19 @@ Args:
     write_file (str) : the txt file we will be writing to 
 ```
 
-And with that you have the data txt file you need for training! 
+After extracting Wikipedia, you should have a txt file of ~12GB in size. To prepare this text for TensorFlow, we must turn it into a tfrecord file. tfrecord files allow us to work with a dataset when we can't load all of it onto RAM. As an intermediary step, we must first slit this file into smaller ones in order not to run into RAM or disk space problems later down the line. Thus we must run split_text.py
+
+```
+python split_text.py --read_file wikipedia.txt --split_number 20 --folder data/split_dir --name_base wiki_split
+```
+split_text.py has the following arguments:
+
+```
+Args:
+    read_file (str) : the txt file that will be split
+    split_number (int) : the number of smaller txt files that will be created
+    folder (str) : the path where the split txt files will be placed
+    name_base (str) : the base name of the split txt files. files will be named as such: base_name_N where N is a number
+```
+
+With that you will have Wikipedia in txt files all in one directory, ready to serve your training needs! 
